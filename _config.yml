@@ -2,7 +2,7 @@
 title: Rakesh T Sasi
 description: 'Software Engineer'
 url: 'http://rakeshtsasi.github.io/myblog' 
-baseurl: 'http://rakeshtsasi.github.io/myblog/'
+baseurl: '/myblog/'
 # google_analytics: 'UA-XXXXXX-X'
 
 author:
