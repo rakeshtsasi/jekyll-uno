@@ -10,9 +10,9 @@ You will create a table like feedback and then add a date filed in mysql . You w
 
 {% highlight ruby %}
 SELECT CONCAT(
-FLOOR(HOUR(TIMEDIFF(now(), t1.feed_time)) / 24), ' days ',
-MOD(HOUR(TIMEDIFF(now(), t1.feed_time)), 24), ' hours ',
-MINUTE(TIMEDIFF(now(), t1.feed_time)), ' minutes') AS dateform 
+FLOOR(HOUR(TIMEDIFF(now(), feed_time)) / 24), ' days ',
+MOD(HOUR(TIMEDIFF(now(), feed_time)), 24), ' hours ',
+MINUTE(TIMEDIFF(now(), feed_time)), ' minutes') AS dateform 
 FROM tbl_feedback 
 {% endhighlight %}
 
