@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2016-01-08 15:04:23
+title:  "Mysql date format!"
+date:   2016-04-08 15:04:23
 categories: jekyll update
 tags: [jekyll]
 ---
