@@ -937,9 +937,9 @@ body {
 
 a {
 	text-decoration: none;
-	color: #e25440; }
+	color: #2196f3; }
 	a:hover {
-		color: #2196f3;
+		color:#1976d2;
 		-o-transition: .5s;
 		-ms-transition: .5s;
 		-moz-transition: .5s;
