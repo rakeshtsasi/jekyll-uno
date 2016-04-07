@@ -934,6 +934,11 @@ body {
 
 ::-moz-selection {
 	background: #fae3df; }
+figure::selection {
+	background: #f00; }
+
+figure::-moz-selection {
+	background: #f00; }	
 
 a {
 	text-decoration: none;
