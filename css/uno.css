@@ -930,15 +930,11 @@ body {
 	color: #666666; }
 
 ::selection {
-	background: #fae3df; }
+	background: #00897b;color:#ffffff; }
 
 ::-moz-selection {
-	background: #fae3df; }
-.highlight::selection {
-	background: #1976d2; }
+	background: #00897b;color:#ffffff; }
 
-.highlight::-moz-selection {
-	background: #1976d2; }	
 
 a {
 	text-decoration: none;
