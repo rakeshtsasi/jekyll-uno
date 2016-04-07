@@ -7,8 +7,10 @@ tags: [mytags]
 ---
 `LAMP` is a combination of operating system and open-source software stack. The acronym LAMP came from the first letters ofLinux, Apache HTTP Server, MySQL or MariaDB database, and PHP/Perl/Python. This tutorial describes how to install LAMP stack on Ubuntu 15.10, however the steps described below should work on previous Ubuntu versions such as Ubuntu 15.04/14.10/14.04/13.10 etc.
 
-# Install LAMP Stack On Ubuntu 15.10
+###Install LAMP Stack On Ubuntu 15.10
+
 ## 1. Install Apache
+
 Apache is an open-source multi-platform web server. It provides a full range of web server features including CGI, SSL and virtual domains.
 
 To install Apache, enter:
