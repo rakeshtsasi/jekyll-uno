@@ -149,3 +149,110 @@ ul.options_identify li span.text{
 	position:relative;
 	}		
 {% endhighlight %}
+
+### 2. HTML 
+
+{% highlight ruby %}
+ 
+ <!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Selected Options</title>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<link rel="stylesheet" type="text/css" href="font-awesome.css"/>
+<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+<script src="myscript.js"></script>
+
+</head>
+
+<body>
+ <div id="main_wrap" ng-app = "mainApp">
+ <div ng-controller = "optionsController">
+   <ul class="options" >
+     <li 
+     ng-class="{onhover: hovering && $index != notavailableindex,selected: ($index == selectedindex && $index != notavailableindex),notavailable: $index == notavailableindex}"  
+     ng-mouseover="hovering = true"
+     ng-mouseout="hovering = false" 
+     ng-click="($index == notavailableindex) || show($index); ($index == notavailableindex) || addclass($index);" 
+     data-val="{{option.product_name}}" 
+     ng-repeat="option in lioptions.liitems"
+     >
+     <span>{{option.product_name}}</span><span class="tick"><i class="fa fa-check"></i></span>
+     
+     </li>
+     
+   </ul>
+   <input type="hidden" name="hidDataval" id="hidDataval"/>
+   <div style="margin:5px;">Selected Option is : <span class="opt">{{lioptions.currentitem}}</span></div>
+   
+ </div>  
+   
+    
+ <ul class="options_identify">
+   <li><span class="icon nottouse"></span><span class="text">Already Taken</span></li>
+   <li><span class="icon"><span class="tick"><i class="fa fa-check"></i></span></span><span class="text">Available</span></li>
+   <li><span class="icon youchoose"><span class="tick"><i class="fa fa-check"></i></span></span><span class="text">You choose</span></li>
+ </ul>
+   
+ </div>
+ 
+ 
+
+ 
+</body>
+</html>
+
+
+{% endhighlight %}
+
+
+### 3. myscript.js
+
+{% highlight ruby %}
+<script>
+      var mainApp = angular.module("mainApp", []);
+
+      mainApp.controller('optionsController', function ($scope) {
+      $scope.lioptions = {
+		  
+		     liitems:[
+	                 { product_name: "Product 1",price: 20},
+			         { product_name: "Product 2",price: 50},
+					 { product_name: "Product 3",price: 40},
+					 { product_name: "Product 4",price: 60},
+					 { product_name: "Product 5",price: 45},
+					 { product_name: "Product 6",price: 345},
+					 { product_name: "Product 7",price: 455}
+	                   		 
+			 ],
+			 
+			 currentitem:''
+			 
+			
+	  };
+			 $scope.show = function(index) {
+               //$scope.items.splice(index, 1);
+			   var obj;
+               obj = $scope.lioptions;
+			   //if($scope.notavailableindex !=index)	
+			   obj.currentitem= "Product - "+obj.liitems[index].product_name +" Price - "+obj.liitems[index].price;
+			   //$scope.selectedindex=index;
+             } 
+			 
+			 $scope.addclass = function(index) {
+               //$scope.items.splice(index, 1);
+			   var obj;
+               obj = $scope.lioptions;	
+			  // if($scope.notavailableindex !=index)		 
+			   $scope.selectedindex=index;
+			  // alert($scope.selected);
+             } 
+			 
+			 $scope.selectedindex = null;
+			 $scope.notavailableindex = 2;
+			 
+             });
+
+          </script>
+     {% endhighlight %}     
