@@ -1,8 +1,8 @@
 # Site settings
 title: Rakesh T Sasi
 description: 'Software Engineer'
-url: '/' 
-baseurl: ''
+url: '' 
+baseurl: '/'
 # google_analytics: 'UA-XXXXXX-X'
 
 author:
